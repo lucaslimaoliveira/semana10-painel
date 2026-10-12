@@ -1,0 +1,238 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--cor-texto);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--cor-fundo-1), var(--cor-fundo-2));
+}
+
+.painel {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--cor-acento);
+}
+
+.cabecalho p {
+  margin: var(--espaco-1) 0 24px;
+  color: var(--cor-texto-suave);
+  font-style: italic;
+}
+
+.quadro {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-cartao);
+  padding: 20px 22px;
+}
+
+.quadro h2 {
+  margin: 0 0 var(--espaco-2);
+  font-size: 1.3rem;
+}
+
+.placar {
+  margin: 0 0 var(--espaco-1);
+  font-weight: bold;
+  color: var(--cor-ok-texto);
+}
+
+.aviso { margin: 0 0 16px; }
+.aviso:empty { margin: 0; }
+
+.completa {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 12px;
+  border-radius: var(--raio-pilula);
+  background: var(--cor-ok-fundo);
+  color: var(--cor-ok-texto);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.quadro ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cartao {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-3);
+  padding: 10px 12px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.cartao .nome {
+  flex: 1;
+}
+
+.cartao .contagem {
+  min-width: 40px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  color: var(--cor-acento);
+}
+
+.badge {
+  min-width: 92px;
+  text-align: center;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: var(--raio-pilula);
+}
+
+.badge.ok {
+  background: var(--cor-ok-fundo);
+  color: var(--cor-ok-texto);
+}
+
+.badge.nope {
+  background: var(--cor-nope-fundo);
+  color: var(--cor-nope-texto);
+}
+
+.cartao button {
+  min-width: 150px;
+  text-align: center;
+  border: 1px solid var(--cor-botao-borda);
+  background: var(--cor-botao-fundo);
+  color: var(--cor-botao-texto);
+  border-radius: var(--raio-botao);
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.cartao button:hover {
+  background: var(--cor-botao-hover);
+}
+
+/* S10: faixa de altura fixa para "salvando... / salvo / erro": a lista nao pula quando a mensagem chega */
+.salvar { min-height: 1.5rem; margin: 0 0 16px; }
+.salvar .aviso, .salvar .erro { margin: 0; }
+
+/* S10: enquanto salva, o botao PARECE bloqueado (medido: sem esta regra o disabled era identico ao normal) */
+.cartao button:disabled {
+  background: var(--cor-botao-fundo);
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.abas {
+  display: flex;
+  gap: var(--espaco-2);
+  margin: 0 0 16px;
+}
+
+.aba {
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-aba-fundo);
+  color: var(--cor-botao-texto);
+  border-radius: var(--raio-aba) var(--raio-aba) 0 0;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.aba:hover {
+  background: var(--cor-aba-hover);
+}
+
+.aba.ativa {
+  background: var(--cor-superficie);
+  color: var(--cor-acento);
+  border-bottom: 3px solid var(--cor-acento);
+  font-weight: bold;
+}
+
+.busca {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+  margin: 0 0 16px;
+}
+
+.busca label {
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+}
+
+.busca input {
+  border: 1px solid var(--cor-botao-borda);
+  background: var(--cor-aba-fundo);
+  color: var(--cor-texto);
+  border-radius: var(--raio-botao);
+  padding: 8px 10px;
+  font-size: 0.95rem;
+}
+
+button:focus-visible,
+a:focus-visible,
+.aba:focus-visible,
+.busca input:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+.aba { text-decoration: none; }
+
+/* ---- S09: a URL carrega um dado (a ficha do aluno) ---- */
+.cartao .nome a {
+  color: var(--cor-texto);
+  text-decoration: underline;
+  text-decoration-color: var(--cor-texto-suave);   /* 7,4:1 sobre o quadro; com --cor-borda era 1,4:1 e sumia no projetor */
+  text-underline-offset: 3px;
+}
+
+.cartao .nome a:hover {
+  text-decoration-color: var(--cor-acento);
+}
+
+.voltar {
+  display: inline-block;
+  margin: var(--espaco-3) 0 0;
+  color: var(--cor-acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: bold;
+}
+
+/* no celular (390 px) o cartao estourava o quadro: nome + pilula + botao nao cabem
+   numa linha de 280 px. Quebra em duas linhas em vez de vazar (medido). */
+@media (max-width: 480px) {
+  .cartao { flex-wrap: wrap; }
+  .cartao .nome { flex-basis: 100%; }
+  .cartao button { min-width: 0; flex: 1; }
+}
+
+/* polimento medido (conselho de 27/09): nada disto muda comportamento, so' leitura */
+button, input { font: inherit; }               /* o botao vinha em Arial 13 px no meio de system-ui 16 px */
+.cartao button { font-size: 0.95rem; }
+.busca input::placeholder { color: var(--cor-texto-suave); opacity: 1; }   /* 8,1:1; com a opacidade padrao era 3,8:1 */
+.quadro .erro { font-weight: normal; }         /* na tela de erro, a explicacao nao grita */
+:root {                                        /* os dois hovers da S08 mal apareciam: 1,19:1 e 1,16:1 (medido) */
+  --cor-botao-hover: #3a4d78;                  /* 1,55:1 sobre o botao; texto 5,8:1 */
+  --cor-aba-hover: #26365a;                    /* 1,45:1 sobre a aba; texto 8,3:1 */
+}
+
+/* ---- S09: a rede tem uma cor de erro ---- */
+.erro { margin: 0 0 16px; color: var(--cor-erro-texto); font-weight: bold; }
+.erro:empty { margin: 0; }
+
+/* Dois controles de entrega precisam caber também no quadro original. */
+.cartao button { min-width: 0; }
+.cartao { flex-wrap: wrap; }
+.erro button { padding: 8px 14px; cursor: pointer; }

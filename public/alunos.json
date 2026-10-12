@@ -1,0 +1,6 @@
+[
+  { "id": 1, "nome": "Ana Souza", "presente": true,  "entregas": 3 },
+  { "id": 2, "nome": "Beto Lima", "presente": false, "entregas": 1 },
+  { "id": 3, "nome": "Bia Costa", "presente": true,  "entregas": 4 },
+  { "id": 4, "nome": "Caio Dias", "presente": true,  "entregas": 0 }
+]

@@ -1,0 +1,42 @@
+/* tokens.css — o sistema de estilo do painel.
+   Um lugar só para cor, raio e espaço. Trocar a identidade = trocar aqui. */
+:root {
+  /* ---- cor: fundo e texto ---- */
+  --cor-fundo-1: #1b2a52;   /* topo do gradiente do corpo */
+  --cor-fundo-2: #0d1420;   /* base do gradiente do corpo */
+  --cor-superficie: #16223d; /* quadro, aba ativa */
+  --cor-texto: #eaf0f7;     /* texto principal */
+  --cor-texto-suave: #9db4d0; /* subtítulo do cabeçalho */
+  --cor-borda: #2b3b5e;
+
+  /* ---- cor: acento e status ---- */
+  --cor-acento: #7cc0ff;     /* h1, contagem, aba ativa */
+  --cor-ok-texto: #8fe0b0;   /* placar, "presente", "turma completa!" */
+  --cor-ok-fundo: #143d2a;
+  --cor-nope-texto: #ffcf9e; /* "ausente" */
+  --cor-nope-fundo: #4a2a14;
+
+  /* ---- cor: controles ---- */
+  --cor-botao-texto: #cbd8ec;
+  --cor-botao-fundo: #22314f;
+  --cor-botao-borda: #4a5a7e;
+  --cor-botao-hover: #2c3c60;
+  --cor-aba-fundo: #101a30;
+  --cor-aba-hover: #1a2740;
+
+  /* ---- cor: foco (anel >= 3:1 contra toda superfície do painel) ---- */
+  --cor-foco: #ffd54a;
+  --cor-erro-texto: #ffb4a2;  /* >= 8,2:1 sobre qualquer fundo do painel (pior caso: topo do gradiente) */
+
+  /* ---- raio ---- */
+  --raio-cartao: 12px;
+  --raio-aba: 8px;
+  --raio-botao: 6px;
+  --raio-pilula: 999px;
+
+  /* ---- espaço ---- */
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 20px;
+}
