@@ -8,10 +8,12 @@ Use Node 22.12+ ou 24.
 
 ```
 npm ci
+# Windows PowerShell:
+Copy-Item .env.example .env
 npm run dev
 ```
 
-O .env local contém VITE_API_URL=/api/alunos. Se precisar, copie .env.example para .env.
+Antes de iniciar, copie .env.example para .env. A configuração usa VITE_API_URL=/api/alunos. O .env não é rastreado no Git.
 
 ## Conferir
 
@@ -26,3 +28,4 @@ Busca por LACUNA em src: 0 resultados. O mini-servidor funciona somente em npm r
 ## Preparação
 
 Desenvolvimento com assistência do Codex.
+
