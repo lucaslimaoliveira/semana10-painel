@@ -29,3 +29,8 @@ Busca por LACUNA em src: 0 resultados. O mini-servidor funciona somente em npm r
 
 Desenvolvimento com assistência do Codex.
 
+
+## Repositório
+
+https://github.com/lucaslimaoliveira/semana10-painel
+
